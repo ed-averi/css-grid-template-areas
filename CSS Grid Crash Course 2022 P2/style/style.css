@@ -1,0 +1,60 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*body used as container*/
+body
+{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'nav content sidebar'
+    'nav footer footer';
+    grid-template-columns: 1fr 4fr 1fr; /*left, center, right*/
+    grid-template-rows: 80px 1fr 70px; /*header, center 1fr of the remaining area, footer*/
+}
+
+header,
+footer,
+main,
+aside,
+nav 
+{
+    background-color: steelblue;
+    color: #fff;
+    padding: 20px;
+    border: skyblue 1px solid;
+}
+
+header 
+{
+    grid-area: header; /*line 16*/
+
+}
+
+nav
+{
+    grid-area: nav; /*line 17*/
+}
+
+main 
+{
+    grid-area: content;/*line 17*/
+}
+
+aside
+{
+    grid-area: sidebar; /*line 17*/
+}
+
+footer
+{
+    grid-area: footer; /*line 18*/
+}
